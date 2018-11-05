@@ -1,8 +1,8 @@
-# ACM
-For ACMWH18
+# Veermata Jijabai Technological Institute, Matunga
+## Semester 3, Mini Project: Java
 
 
-Health and Fitness
+
 ------------------
 
-UNHOLIFY: Be responsible, be safe.
+
