@@ -1,0 +1,71 @@
+import javax.swing.*;  
+import java.awt.*;
+import java.awt.event.*;  
+public class Test1 extends JFrame implements ActionListener{  
+    JLabel l, l2;  
+    JCheckBox cb1,cb2,cb3;  
+    JButton b;  
+    JTextField tf1, tf2, tf3;
+    Test1()
+    {
+    	Font prompt = new Font("Helvlight", Font.BOLD, 25);
+    	Font description = new Font("Helvlight", Font.BOLD, 18);
+    	Font caption = new Font("Helvlight", Font.BOLD, 14);
+        l=new JLabel("TASKS");
+        l.setFont(prompt);
+        l.setBounds(300,50,300,20);  
+        l2 = new JLabel("List the three most important things you plan on finishing today");
+        l2.setFont(caption);
+        l2.setBounds(100,73,600,20);
+        
+        cb1=new JCheckBox("Task 1"); 
+        cb1.setFont(description); 
+        cb1.setBounds(100,100,90,50);  
+        tf1 = new JTextField();
+        tf1.setBounds(200,100,300,55);
+        
+        cb2=new JCheckBox("Task2");  
+        cb2.setFont(description);
+        cb2.setBounds(100,160,90,50); 
+        tf2 = new JTextField();
+        tf2.setBounds(200,160,300,55);
+        
+        cb3=new JCheckBox("Task3");  
+        cb3.setFont(description);
+        cb3.setBounds(100,220,90,50);
+        tf3 = new JTextField();
+        tf3.setBounds(200,220,300,55); 
+        
+        b=new JButton("Done!");
+        b.setFont(prompt);
+        b.setBounds(250,325,200,40);  
+        b.addActionListener(this);  
+        add(l);add(cb1);add(cb2);add(cb3);add(b);add(tf1);add(tf2);add(tf3);add(l2);
+        setSize(700,500);  
+        setLayout(null);  
+        setVisible(true);  
+        setDefaultCloseOperation(EXIT_ON_CLOSE);  
+    }  
+    public void actionPerformed(ActionEvent e){  
+        String s="";
+        if(cb1.isSelected()){ 
+            s = s + tf1.getText() + "; ";
+            tf1.setText("");
+            cb1.setSelected(false);
+        }  
+        if(cb2.isSelected()){  
+        	s = s + tf2.getText() + "; ";
+        	tf2.setText("");
+        	cb2.setSelected(false);
+        }  
+        if(cb3.isSelected()){  
+        	s = s + tf3.getText() + "; ";
+        	tf3.setText("");
+        	cb3.setSelected(false);
+        }   
+        JOptionPane.showMessageDialog(this,"Tasks completed:\n"+s);  
+    }  
+    public static void main(String[] args) {  
+        new Test1();  
+    }  
+} 
