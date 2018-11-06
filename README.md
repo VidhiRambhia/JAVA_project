@@ -8,7 +8,7 @@ What's this?
 A simple multifaceted application that serves as a basic working prototype for:
 
 * A grammar checker for entered sentences or paragraphs;
-* A personal, diurnal event tracker;
+* A personal, diurnal (and nocturnal) event tracker;
 * A quiz generator.
 
 What is it made of?
