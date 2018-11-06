@@ -1,0 +1,63 @@
+import javax.swing.*;  
+import java.awt.*;
+import java.awt.event.*;  
+public class Test1 extends JFrame implements ActionListener{  
+    JLabel l;  
+    JCheckBox cb1,cb2,cb3;  
+    JButton b;  
+    JTextField tf1, tf2, tf3;
+    Test1()
+    {
+    	Font f = new Font("Helvlight", Font.BOLD, 25);
+        l=new JLabel("TASKS TO DO TODAY");
+        l.setFont(f);
+        l.setBounds(50,50,300,20);  
+        
+        cb1=new JCheckBox("Task1");  
+        cb1.setBounds(100,100,20,20);  
+        tf1 = new JTextField();
+        tf1.setBounds(120,100,200,20);
+        
+        cb2=new JCheckBox("Task2");  
+        cb2.setBounds(100,150,20,20); 
+        tf2 = new JTextField();
+        tf2.setBounds(120,150,200,20);
+        
+        cb3=new JCheckBox("Task3");  
+        cb3.setBounds(100,200,20,20);
+        tf3 = new JTextField();
+        tf3.setBounds(120,200,200,20); 
+        
+        b=new JButton("Done!");
+        b.setFont(f);
+        b.setBounds(100,250,200,40);  
+        b.addActionListener(this);  
+        add(l);add(cb1);add(cb2);add(cb3);add(b);add(tf1);add(tf2);add(tf3);
+        setSize(400,400);  
+        setLayout(null);  
+        setVisible(true);  
+        setDefaultCloseOperation(EXIT_ON_CLOSE);  
+    }  
+    public void actionPerformed(ActionEvent e){  
+        String s="";
+        if(cb1.isSelected()){ 
+            s = s + tf1.getText() + "; ";
+            tf1.setText("");
+            cb1.setSelected(false);
+        }  
+        if(cb2.isSelected()){  
+        	s = s + tf2.getText() + "; ";
+        	tf2.setText("");
+        	cb2.setSelected(false);
+        }  
+        if(cb3.isSelected()){  
+        	s = s + tf3.getText() + "; ";
+        	tf3.setText("");
+        	cb3.setSelected(false);
+        }   
+        JOptionPane.showMessageDialog(this,"Tasks completed:\n"+s);  
+    }  
+    public static void main(String[] args) {  
+        new Test1();  
+    }  
+} 
