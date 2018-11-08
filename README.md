@@ -1,13 +1,12 @@
 # Veermata Jijabai Technological Institute, Matunga
 Semester 3, Mini Project: Java
-
+### NVision - *Do more everyday*
 
 What's this?
 ------------
 
 A simple multifaceted application that serves as a basic working prototype for:
 
-* A grammar checker for entered sentences or paragraphs;
 * A personal, diurnal (and nocturnal) event tracker;
 * A quiz generator.
 
