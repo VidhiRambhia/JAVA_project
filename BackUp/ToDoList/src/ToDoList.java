@@ -1,14 +1,12 @@
-
 // To-do List
 
 import javax.swing.*; // JFrame and components 
 import java.awt.*; // for Font class(es)
 import java.awt.event.*; // for actionListeners
 import java.util.Random; // for image idices picked randomly
-import java.util.Scanner;
 import java.io.*;
 
-public class ToDo extends JFrame implements ActionListener
+public class ToDoList extends JFrame implements ActionListener
 { 
 	// all Swing variables are (implicitly) declared static/global since they are just indicators for actual data they point to
     // (components remain the same throughout the program)
@@ -22,9 +20,8 @@ public class ToDo extends JFrame implements ActionListener
     int more, n=0;
     Random rand = new Random();
     static String name="";
-    Scanner s = new Scanner(System.in);
     
-    ToDo(String name) // constructor
+    ToDoList(String name) // constructor
     {
     	// image arsenal 
     	
@@ -94,9 +91,6 @@ public class ToDo extends JFrame implements ActionListener
     	
     	// image arsenal ends
     	
-    	
-    	System.out.println("Enter your name");
-    	name = s.nextLine();
     	// initializing required font styles
     	Font prompt = new Font("Helvlight", Font.BOLD, 25);
     	Font description = new Font("Helvlight", Font.BOLD, 18);
@@ -150,14 +144,13 @@ public class ToDo extends JFrame implements ActionListener
         setSize(520,525); 
         setTitle(name);
         setLayout(null);  
-        setLocation(690,250); 
         setVisible(true);  // frame visible hai (how stupid)
         setDefaultCloseOperation(EXIT_ON_CLOSE);  
     }  
     
     public void actionPerformed(ActionEvent e)
     {  
-        System.out.println(n);
+        System.out.println(n);;
         String s="";
         more=0;
         if(cb1.isSelected())
@@ -187,8 +180,14 @@ public class ToDo extends JFrame implements ActionListener
         JOptionPane.showMessageDialog(this,"Great job.\nTasks completed:\n\n"+s+"\n\nYou have "+(3-more)+" tasks left to do.");  
     }  
     
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {  
-        new ToDo(name);  
+    	InputStreamReader input = new InputStreamReader(System.in);
+    	BufferedReader buf = new BufferedReader(input);
+    	System.out.println("Whose To-Do List is this?");
+    	name = buf.readLine();
+    	System.out.println("Great, thanks. Happy working.");
+        new ToDoList(name);  
     }  
 }
+

@@ -1,3 +1,4 @@
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,35 +13,35 @@ public class FirstPage  extends JFrame implements ActionListener {
 	ImageIcon image1;
 	JLabel l;
 	int option=0;
+	Font caption = new Font("Helvlight", Font.BOLD, 16);
 	
-	public FirstPage(String s) {
-		
-		super(s);
-		image1 = new ImageIcon(getClass().getResource("Thug Life.jpg"));
-		l=new JLabel(image1);  
-		add(l);
-		    b1=new JButton("Quiz");  
-	        b2=new JButton("Organize your Tasks");  
-	       
-	      
-	       
-	        b1.addActionListener(this);  
+	public FirstPage(String s)
+	{
+			
+			super(s);
+			image1 = new ImageIcon(getClass().getResource("logo.png"));
+			l=new JLabel(image1); 
+			add(l);
+		    b1=new JButton("Take a quiz");  
+		    b1.addActionListener(this); 
+		    b1.setFont(caption);
+	        
+		    b2=new JButton("List today's tasks");  
 	        b2.addActionListener(this);  
-	        
-	        
+	        b2.setFont(caption);
+
 	        add(b1);add(b2); 
 	        
-	        l.setBounds(30,40,450,20);  
+	        l.setBounds(0,5,730,260);  
 	        
-	     
-	        b1.setBounds(100,200,100,100);  
-	        b2.setBounds(270,200,200,100);  
+	        b1.setBounds(120,300,250,80);  
+	        b2.setBounds(370,300,250,80);  
 	       
 	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
 	        setLayout(null);  
-	        setLocation(250,100);  
+	        setLocation(640,300);  
 	        setVisible(true);  
-	        setSize(600,350);  
+	        setSize(740,500);  
 	}
 	public void actionPerformed(ActionEvent e) {
 		
@@ -48,16 +49,14 @@ public class FirstPage  extends JFrame implements ActionListener {
     	if(e.getSource()==b1)  
         {  
             option=1;
-            new MainFrame("QUIZ");
-            dispose();
+            new MainFrame("Revise a bit:\n Take a quiz!");
             
            
         } 
     	if(e.getSource()==b2)  
         {  
             option=2;
-            new ToDo("Organize");
-            dispose();
+            new ToDo("");
           
         }
     	
@@ -65,7 +64,7 @@ public class FirstPage  extends JFrame implements ActionListener {
 	
     public static void main(String[] args) {
 		
-    	new FirstPage("Student Mate");
+    	new FirstPage("NVision");
 	}
 
 
