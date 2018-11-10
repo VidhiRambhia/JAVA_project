@@ -1,7 +1,7 @@
 # Veermata Jijabai Technological Institute, Matunga
 Semester 3, Mini Project: Java
 ### NVision - *Do more everyday*
-![Image here](https://github.com/VidhiRambhia/JAVA_project/blob/master/Final_Project/src/fair.jpg)
+![Image here](https://github.com/VidhiRambhia/JAVA_project/blob/master/Final_Project/src/firstpage.PNG)
 
 What's this?
 ------------
