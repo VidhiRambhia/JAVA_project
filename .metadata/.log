@@ -6827,3 +6827,17 @@ Caused by: java.io.IOException: CreateProcess error=193, %1 is not a valid Win32
 	at java.lang.ProcessImpl.<init>(Unknown Source)
 	at java.lang.ProcessImpl.start(Unknown Source)
 	... 10 more
+!SESSION 2018-11-10 10:31:15.473 -----------------------------------------------
+eclipse.buildId=4.9.0.I20180906-0745
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product C:\Users\Nidhee\JAVA_project\Final_Project\src\FirstPage.java
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product C:\Users\Nidhee\JAVA_project\Final_Project\src\FirstPage.java
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-11-10 10:32:40.279
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Nidhee'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
