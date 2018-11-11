@@ -57,7 +57,7 @@ public class FirstPage  extends JFrame implements ActionListener {
         {  
             option=2;
             new ToDo("Organize");
-            dispose();
+          
           
         }
     	
