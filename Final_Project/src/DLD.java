@@ -13,11 +13,13 @@ public class DLD extends JFrame implements ActionListener
     JButton b1,b2;  
     ButtonGroup bg;  
     int count=0,current=0,x=1,y=1,now=0;  
-    int m[]=new int[10];      
+    int m[]=new int[10];  
+    Font caption = new Font("Helvlight", Font.BOLD,14);
+    
     DLD(String s)  
     {  
         super(s); 
-        image1 = new ImageIcon(getClass().getResource("Thug Life.jpg"));
+        image1 = new ImageIcon(getClass().getResource("quiz6.jpg"));
         l=new JLabel(); 
         l2=new JLabel(image1);  
         add(l2);  
@@ -25,7 +27,8 @@ public class DLD extends JFrame implements ActionListener
         bg=new ButtonGroup();  
         for(int i=0;i<5;i++)  
         {  
-            jb[i]=new JRadioButton();     
+            jb[i]=new JRadioButton();  
+            jb[i].setFont(caption);
             add(jb[i]);  
             bg.add(jb[i]);  
         }  
@@ -35,19 +38,25 @@ public class DLD extends JFrame implements ActionListener
         b2.addActionListener(this);  
         add(b1);add(b2);  
         set();  
-        l.setBounds(30,40,450,20);  
-        l2.setBounds(400, -60, 450, 450);
-        jb[0].setBounds(50,80,100,20);  
-        jb[1].setBounds(50,110,100,20);  
-        jb[2].setBounds(50,140,100,20);  
-        jb[3].setBounds(50,170,100,20);  
-        b1.setBounds(100,240,100,30);  
-        b2.setBounds(270,240,100,30);  
+        
+        b1.setFont(caption);
+        b2.setFont(caption);
+        l.setFont(caption);
+        
+        l.setBounds(30,40,750,50);  
+        l2.setBounds(550, 0, 445, 450);
+        jb[0].setBounds(50,80,400,30);  
+        jb[1].setBounds(50,110,400,30);  
+        jb[2].setBounds(50,140,400,30);  
+        jb[3].setBounds(50,170,400,30);  
+        b1.setBounds(35,240,200,40);  
+        b2.setBounds(245,240,200,40);  
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         setLayout(null);  
-        setLocation(250,100);  
+        setLocation(460,280);  
         setVisible(true);  
-        setSize(500,400);  
+        setSize(985,500);  
     }  
     public void actionPerformed(ActionEvent e)  
     {  
@@ -188,6 +197,6 @@ public class DLD extends JFrame implements ActionListener
     }  
     public static void main(String s[])  
     {  
-        new DLD("Test your DLD skills!");  
+        new DLD("Test your DLD skills");  
     }  
 }  
