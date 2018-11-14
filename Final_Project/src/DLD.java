@@ -1,5 +1,5 @@
 
-/*Online Java Paper Test*/  
+/*Online DLD Paper Test*/  
   
 import java.awt.*;  
 import java.awt.event.*;  
