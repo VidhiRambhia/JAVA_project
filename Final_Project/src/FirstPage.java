@@ -56,12 +56,7 @@ public class FirstPage  extends JFrame implements ActionListener {
     	if(e.getSource()==b2)  
         {  
             option=2;
-<<<<<<< HEAD
-            new ToDo("Organize");
-          
-=======
             new ToDo("");
->>>>>>> e2d9bd73cf54650ad2dadca0a894a18a9e9d8cc8
           
         }
     	
